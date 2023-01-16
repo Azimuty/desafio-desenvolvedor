@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+
+  postgres:
+    image: postgres
+    container_name: dd_postgres
+    restart: on-failure
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  desafio:
+    image: azimuty/desafio:php
+    container_name: desafio_desenvolvedor
+    restart: on-failure
+    ports:
+      - 8080:80

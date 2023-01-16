@@ -1,48 +1,42 @@
-### A Oliveira Trust:
-A Oliveira Trust é uma das maiores empresas do setor Financeiro com muito orgulho, desde 1991, realizamos as maiores transações do mercado de Títulos e Valores Mobiliários.
+### Requisitos atendidos do desafio:
 
-Somos uma empresa em que valorizamos o nosso colaborador em primeiro lugar, sempre! Alinhando isso com a nossa missão "Promover a satisfação dos nossos clientes e o desenvolvimento pessoal e profissional da nossa equipe", estamos construindo times excepcionais em Tecnologia, Comercial, Engenharia de Software, Produto, Financeiro, Jurídico e Data Science.
+O desafio foi desenvolvido em duas versões: nodeJs e PHP.
 
-Estamos buscando uma pessoa que seja movida a desafios, que saiba trabalhar em equipe e queira revolucionar o mercado financeiro!
+Ambas as soluções atenderam os requisitos mínimos, incluindo cadastro e autenticação de usuário, e histórico de cotações.
 
-Front-end? Back-end? Full Stack? Analista de dados? Queremos conhecer gente boa, que goste de colocar a mão na massa, seja responsável e queira fazer história!
+Foi implementada também todas as opções de conversões de moeda disponível na aplicação de terceiros sugerida.
+Essa implementação foi feita de forma dinâmica, com dados sendo atualizados a cada inicialização da api.
+No caso da versão PHP, os dados estão sendo atualizados a cada solicitação do usuário.
 
-#### O que você precisa saber para entrar no nosso time: 🚀
-- Trabalhar com frameworks (Laravel, Lumen, Yii, Cake, Symfony ou outros...)
-- Banco de dados relacional (MySql, MariaDB)
-- Trabalhar com microsserviços
+Na aplicação em nodeJS foi implementada possibilitando a alteração das taxas de conversão de dos métodos de pagamento via banco de dados.
+Existe a possibilidade de implementear um endpoint e tela específicos para essa função também.
 
-#### O que seria legal você saber também: 🚀
-- Conhecimento em banco de dados não relacional;
-- Conhecimento em docker;
-- Conhecimento nos serviços da AWS (RDS, DynamoDB, DocumentDB, Elasticsearch);
-- Conhecimento em metodologias ágeis (Scrum/Kanban);
+O banco de dados utilizado foi o PostgreSql.
 
-#### Ao entrar nessa jornada com o nosso time, você vai: 🚀
-- Trabalhar em uma equipe de tecnologia, em um ambiente leve e descontraído e vivenciar a experiência de mudar o mercado financeiro;
-- Dress code da forma que você se sentir mais confortável;
-- Flexibilidade para home office e horários;
-- Acesso a cursos patrocinados pela empresa;
+Ambas as soluções estão compiladas e disponíveis para teste no dokcer hub, bastando apenas fazer um "docker-compose up" no arquivo yml.
+Cada solução possui o seu docker-compose e imagem associada disponível em repositório público.
 
-#### Benefícios 🚀
-- Salário compatível com o mercado;
-- Vale Refeição;
-- Vale Alimentação;
-- Vale Transporte ou Vale Combustível;
-- Plano de Saúde e Odontológico;
-- Seguro de vida;
-- PLR Semestral;
-- Horário Flexível;
-- Parcerias em farmácias
+Durante o processo foi desenvolvido também uma unica imagem docker utilizada como ambiente de desenvolvimento PHP e também como base para a criação da imagem disponibilizada.
 
-#### Local: 🚀
-Barra da Tijuca, Rio de Janeiro, RJ
+Uma vez que esteja rodando, a aplicação pode ser acessada no navegador através do endereço "http://localhost:8080".
 
-#### Conheça mais sobre nós! :sunglasses:
-- Website (https://www.oliveiratrust.com.br/)
-- LinkedIn (https://www.linkedin.com/company/oliveiratrust/)
+#### Particularidades da implementação nodeJS
 
-A Oliveira Trust acredita na inclusão e na promoção da diversidade em todas as suas formas. Temos como valores o respeito e valorização das pessoas e combatemos qualquer tipo de discriminação. Incentivamos a todos que se identifiquem com o perfil e requisitos das vagas disponíveis que candidatem, sem qualquer distinção.
+- Documentação de endpoints disponível no endereço "http://localhost:8080/api/doc".
+- Código com tipografia ds variáveis facilitando o entendimento do código.
+- Utilização do recurso de dados não relacionais do PostgreSql.
+- Configuração através de variáveis, através do docker ou arquivo ".env" local.
 
-## Pronto para o desafio? 🚀🚀🚀🚀
-https://github.com/Oliveira-Trust/desafio-desenvolvedor/blob/master/vaga.md
+#### Estrutura do Backend
+
+- Arquivos "api.php" (PHP) ou "server.ts" (NodeJS) - arquivos de ponto de entrada na aplicação.
+- Pasta "routes" - Rotas para os endpoints.
+- Pasta "controller" - Ponto de entrada para implemetnação dos endpoints.
+- Pasta "model" - Modelagem da tabela no banco de dados e retorno de instanciamento do repositório associado.
+- Pasta "service" - Recursos avançados necessários para a execução das tarefas.
+- Pasta "util" - Bibliotecas desenvolvidas ou encapsulamento de bibliotecas externas.
+
+#### Desenvolvido po:
+
+Renato de Almeida Faria.
+renato@azimuty.com.br

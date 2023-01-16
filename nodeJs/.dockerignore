@@ -1,0 +1,10 @@
+backup
+node_modules
+rest
+doc
+Dockerfile
+docker-compose.yml
+src
+.gitignore
+.env
+.env.default
